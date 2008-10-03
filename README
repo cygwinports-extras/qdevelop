@@ -1,0 +1,75 @@
+qdevelop
+------------------------------------------
+QDevelop is a cross-platform integrated development environment, 
+entirely dedicated to Qt4. It consists of a Qt project manager, a source 
+code editor, build-automation tools by calling make command, and the gdb 
+debugger. QDevelop aims to be easy to use and does not try to compete 
+with more complete tools, like kdevelop, which are often too complex. 
+Its goal is simplicity, powerfulness and a same interface on all 
+platforms.
+
+Runtime requirements:
+  cygwin-1.5.25-15
+  libQtCore4-4.4.2-1
+  libQtGui4-4.4.2-1
+  libQtNetwork4-4.4.2-1
+  libQtSql4-4.4.2-1
+  libQtXml4-4.4.2-1
+  ctags
+  gdb
+  make
+  qt4-devel-tools
+
+Build requirements:
+(besides corresponding -devel packages)
+  autoconf2.5-2.61-1
+  automake1.10-1.10.1-1
+  binutils-20080624-2
+  bison-2.3-1
+  cygport-0.4.0-1
+  flex-2.5.35-1
+  gawk-3.1.6-1
+  gcc-core-3.4.4-3
+  libtool-2.2.2-2
+  make-3.81-1
+  pkg-config-0.23a-2
+  sed-4.1.5-2
+
+Canonical website:
+  http://qdevelop.free.fr/
+
+Canonical download:
+  http://qdevelop.free.fr/download/
+
+-------------------------------------------
+
+Build instructions:
+  unpack qdevelop-0.25.2-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./qdevelop-0.25.2-X.cygport all
+
+This will create:
+  /usr/src/qdevelop-0.25.2-X-src.tar.bz2
+  /usr/src/qdevelop-0.25.2-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/bin/qdevelop.exe
+  /usr/share/doc/qdevelop-0.25.2/COPYING
+  /usr/share/doc/qdevelop-0.25.2/ChangeLog.txt
+  /usr/share/doc/qdevelop-0.25.2/README.txt
+
+------------------
+
+Port Notes:
+
+----- version 0.25.2-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/

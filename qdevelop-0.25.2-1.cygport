@@ -1,0 +1,5 @@
+inherit qt4-qmake
+
+DESCRIPTION="IDE for Qt4"
+HOMEPAGE="http://qdevelop.free.fr/"
+SRC_URI="http://qdevelop.free.fr/download/${P}.tar.gz"
