@@ -1,0 +1,13 @@
+inherit qt4-qmake
+
+DESCRIPTION="IDE for Qt4"
+HOMEPAGE="http://qdevelop.org/"
+SRC_URI="http://qdevelop.org/public/release/${P}.tar.gz"
+
+src_install() {
+	cd ${B}
+	qt4_qmake_install
+
+	newicon ${S}/resources/images/logo.png qdevelop.png
+	make_desktop_entry qdevelop QDevelop qdevelop "Development;IDE;Qt"
+}
