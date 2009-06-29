@@ -1,5 +1,5 @@
 category: Devel KDE
-requires: cygwin libgcc1 libQtCore4 libQtCore4-devel libQtGui4 libQtNetwork4 libQtSql4 libstdc++6 ctags gdb make qt4-devel-tools
+requires: libgcc1 libQtCore4 libQtCore4-devel libQtGui4 libQtNetwork4 libQtSql4 libstdc++6 ctags gdb make qt4-devel-tools
 sdesc: "Qt4 C++ IDE"
 ldesc: "QDevelop is a cross-platform integrated development environment, 
 entirely dedicated to Qt4. It consists of a Qt project manager, a source 
