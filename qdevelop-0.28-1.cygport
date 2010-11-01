@@ -1,0 +1,18 @@
+inherit qt4-cmake
+
+DESCRIPTION="IDE for Qt4"
+HOMEPAGE="http://biord-software.org/qdevelop/"
+SRC_URI="http://biord-software.org/downloads/${PN}-v${PV}.tar.gz"
+SRC_DIR="${PN}-v${PV}"
+
+PATCH_URI="0.28-plugin-install.patch"
+
+CYGCMAKE_ARGS="-DAUTOPLUGINS=ON"
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	newicon ${S}/resources/images/logo.png qdevelop.png
+	make_desktop_entry qdevelop QDevelop qdevelop "Development;IDE;Qt"
+}

@@ -1,0 +1,13 @@
+Do not install the plugins' implibs.
+
+--- origsrc/qdevelop-v0.28/CMakeLists.txt	2010-04-17 02:24:40.000000000 -0500
++++ src/qdevelop-v0.28/CMakeLists.txt	2010-11-01 12:52:05.854143200 -0500
+@@ -279,7 +279,7 @@ IF (AUTOPLUGINS)
+ 				INSTALL (TARGETS ${PLG_NAME} DESTINATION bin/plugins)
+ 				INSTALL (FILES ${PLG_QM} DESTINATION translations/${PLG_NAME})
+ 			ELSE (NOT WIN32)
+-				INSTALL (TARGETS ${PLG_NAME} DESTINATION lib/qdevelop/plugins)
++				INSTALL (TARGETS ${PLG_NAME} LIBRARY RUNTIME DESTINATION lib/qdevelop/plugins)
+ 				INSTALL (FILES ${PLG_QM} DESTINATION lib/qdevelop/translations/${PLG_NAME})
+ 			ENDIF (WIN32)
+ 		ENDIF (IS_EMPTY)
