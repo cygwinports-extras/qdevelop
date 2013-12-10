@@ -1,0 +1,18 @@
+FTBFS:
+
+Building RC object CMakeFiles/qdevelop.dir/QDevelop.obj
+/usr/bin/windres: unknown format type `2'
+/usr/bin/windres: supported formats: rc res coff
+
+--- origsrc/qdevelop/CMakeLists.txt	2013-12-10 03:00:56.137661700 -0600
++++ src/qdevelop/CMakeLists.txt	2013-12-10 03:10:59.127150800 -0600
+@@ -212,7 +214,9 @@ IF( MINGW )
+ 	SET( qdevelop_SRCS ${qdevelop_SRCS} ${CMAKE_CURRENT_BINARY_DIR}/qdevelop_ico.o)
+ 	SET( QT_UITOOLSLIB QtUiTools QtDesigner4  )
+ ELSE( MINGW )
++    IF (WIN32)
+ 	SET(qdevelop_SRCS	${qdevelop_SRCS} QDevelop.rc)
++    ENDIF (WIN32)
+ 	SET(QT_UITOOLSLIB	${QT_QTUITOOLS_LIBRARY} QtDesigner )
+ ENDIF( MINGW )
+ 

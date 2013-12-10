@@ -1,0 +1,20 @@
+Fixed upstream in r482
+
+--- origsrc/qdevelop/CMakeLists.txt	2013-12-10 03:00:56.137661700 -0600
++++ src/qdevelop/CMakeLists.txt	2013-12-10 03:10:59.127150800 -0600
+@@ -84,6 +84,7 @@ SET( qdevelop_SRCS
+ 	src/designer.cpp
+ 	src/editor.cpp
+ 	src/findfileimpl.cpp
++	src/getlastversion.cpp
+ 	src/lineedit.cpp
+ 	src/logbuild.cpp
+ 	src/linenumbers.cpp
+@@ -122,6 +123,7 @@ SET( qdevelop_MOC_HDRS
+ 	src/debug.h
+ 	src/editor.h
+ 	src/findfileimpl.h
++	src/getlastversion.h
+ 	src/linenumbers.h
+ 	src/logbuild.h
+ 	src/mainimpl.h

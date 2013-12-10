@@ -1,7 +1,10 @@
-inherit qt4-cmake
+SVN_URI="http://qdevelop.googlecode.com/svn"
+SVN_TAG="v${PV}"
+SVN_MODULE="qdevelop"
+inherit svn qt4-cmake
 
 NAME="qdevelop"
-VERSION=0.28
+VERSION=0.29
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="Qt4 C++ IDE"
@@ -13,9 +16,13 @@ tools, like kdevelop, which are often too complex. Its goal is simplicity,
 powerfulness and a same interface on all platforms."
 REQUIRES="ctags gdb make qt4-devel-tools"
 HOMEPAGE="http://biord-software.org/qdevelop/"
-SRC_URI="http://biord-software.org/downloads/${NAME}-v${VERSION}.tar.gz"
-SRC_DIR="${NAME}-v${VERSION}"
-PATCH_URI="0.28-plugin-install.patch"
+#SRC_URI="http://biord-software.org/downloads/${NAME}-v${VERSION}.tar.gz"
+#SRC_DIR="${NAME}-v${VERSION}"
+PATCH_URI="
+	0.28-plugin-install.patch
+	0.29-getlastversion.patch
+	0.29-cygwin.patch
+"
 
 CYGCMAKE_ARGS="-DAUTOPLUGINS=ON"
 
