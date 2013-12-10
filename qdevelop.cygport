@@ -1,0 +1,28 @@
+inherit qt4-cmake
+
+NAME="qdevelop"
+VERSION=0.28
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="Qt4 C++ IDE"
+DESCRIPTION="QDevelop is a cross-platform integrated development environment,
+entirely dedicated to Qt4. It consists of a Qt project manager, a source code
+editor, build-automation tools by calling make command, and the gdb debugger.
+QDevelop aims to be easy to use and does not try to compete with more complete
+tools, like kdevelop, which are often too complex. Its goal is simplicity,
+powerfulness and a same interface on all platforms."
+REQUIRES="ctags gdb make qt4-devel-tools"
+HOMEPAGE="http://biord-software.org/qdevelop/"
+SRC_URI="http://biord-software.org/downloads/${NAME}-v${VERSION}.tar.gz"
+SRC_DIR="${NAME}-v${VERSION}"
+PATCH_URI="0.28-plugin-install.patch"
+
+CYGCMAKE_ARGS="-DAUTOPLUGINS=ON"
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	newicon ${S}/resources/images/logo.png qdevelop.png
+	make_desktop_entry qdevelop QDevelop qdevelop "Development;IDE;Qt"
+}
